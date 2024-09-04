@@ -37,15 +37,28 @@ const unshiftss = friends.unshift('who tell you are frist');
 
 
 
-const friuts = ['amm','jamm','lichu','kola'];
-const number = [2,4,6,7,2,56];
-const flower = ['beli','shapla','joba','golap'];
-const animal = ['cow','cat','tiger','lion'];
+// const friuts = ['amm','jamm','lichu','kola'];
+// const number = [2,4,6,7,2,56];
+// const flower = ['beli','shapla','joba','golap'];
+// const animal = ['cow','cat','tiger','lion'];
+
+
+// const total = animal.concat(number,friuts);
+// const items = flower.concat(animal);
+// console.log(total)
 
 
 
-const total = animal.concat(number,friuts);
-const items = flower.concat(animal);
-console.log(total)
+const flowers    = ["golap","shapla","joba","beli"];
+const find       = flowers.indexOf('shapla')
+const hasFlower  = flowers.includes('krisnochora')
+console.log(hasFlower)
 
+
+if(hasFlower){
+    console.log('Congratultion you are selected')
+}
+else(
+    console.log('Try to next session')
+)
 
