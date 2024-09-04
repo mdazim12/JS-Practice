@@ -11,8 +11,8 @@ let rev = ' ';
 
 for(i = 0; i < sentence.length; i++){
     const latter = sentence[i];
-   rev = latter + rev;
-
+   rev = 
+latter + rev;
 }
 console.log(rev);
 
