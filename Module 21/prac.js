@@ -50,15 +50,22 @@ const unshiftss = friends.unshift('who tell you are frist');
 
 
 const flowers    = ["golap","shapla","joba","beli"];
-const find       = flowers.indexOf('shapla')
-const hasFlower  = flowers.includes('krisnochora')
-console.log(hasFlower)
+// const find       = flowers.indexOf('shapla')
+// const hasFlower  = flowers.includes('krisnochora')
+// console.log(hasFlower)
 
 
-if(hasFlower){
-    console.log('Congratultion you are selected')
-}
-else(
-    console.log('Try to next session')
-)
+// if(hasFlower){
+//     console.log('Congratultion you are selected')
+// }
+// else(
+//     console.log('Try to next session')
+// )
+
+const fools = flowers.join("--")
+console.log(fools)
+//  const abc = "golap,shapla,joba,beli";
+//  const convert = abc.split(",")
+//  console.log(convert)
+//  console.log(Array.isArray(convert))
 
