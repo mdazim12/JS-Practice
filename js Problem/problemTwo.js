@@ -7,7 +7,11 @@ function checkNane(name){
     let result = false;
     const checkArray = ['a', 'y','i','e','o','u','w'];
 
-    
+    for(const char of checkArray){
+        if(char === lastLatter){
+            result = true;
+        }
+    }
     return result ? 'Good Name' : 'Bad Name';
 }
 
