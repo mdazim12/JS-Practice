@@ -4,10 +4,15 @@ const student = {
     adress : 'Movie center',
     isSingle : false,
     friends : ['apu' , 'Bublie','Pornima','Razz'],
+    act : function(){
+        console.log('acting skakib khan');
+    },
     car : {
         brand : 'Tesla',
         price : 200000,
         model : 2034,
     }
 }
-console.log(student.car.model);
+
+// console.log(student.act());
+student.act();
