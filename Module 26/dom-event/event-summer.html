@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dom Summary</title>
+</head>
+<body>
+
+    <h1>Hello sir </h1>
+    <h3 id="handeler-status">Default status</h3>
+    <button onclick="handelOnClick() "> Click me event handeler</button>
+    <button id ='event-lisener'>Add event Lisener</button>
+
+    <br>
+    <br><br><br>
+
+    <p id="input-text-display">Default text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+
+
+    <script>
+        function handelOnClick(){
+           const handelerStaus = document.getElementById('handeler-status');
+           handelerStaus.innerText = 'This is change by funcrion';
+        }
+        document.getElementById('event-lisener').addEventListener('click', function(){
+            const handelerStaus = document.getElementById('andeler-status');
+            handelerStaus.innerHTML = 'text is changes'
+        });
+
+        //option two
+        document.getElementById('event-lisener').addEventListener('click',function(){
+            const handelerStaus = document.getElementById('handeler-status');
+            handelerStaus.innerText = 'Text change by using events';
+        })
+
+
+        //Update text from input
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputFiled = document.getElementById('input-field');
+            const inputText = inputFiled.value;
+
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputFiled.value = ' ';
+        });
+
+
+
+    </script>
+</body>
+</html>
