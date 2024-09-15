@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Expole bubble events</h1>
+    <div>
+        <section id="section-container">
+            <ul id="list-ul">
+                <li id="item-1">Lorem, ipsum.</li>
+                <li id="item-2">Similique, eius.</li>
+                <li id="item-3">Aperiam, deserunt!</li>
+                <li id="item-4">In, omnis?</li>
+                <li id="item-5">Vitae, eaque.</li>
+                <li id="item-6">Suscipit, repudiandae?</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("item-2").addEventListener('click',function(){
+            console.log('event 2 clicked');
+        })
+
+        document.getElementById('list-ul').addEventListener('click',function(){
+            console.log('ull clicked');
+        })
+        document.getElementById('section-container').addEventListener('click',function(){
+            console.log('section clicked');
+        })
+    </script>
+</body>
+</html>
