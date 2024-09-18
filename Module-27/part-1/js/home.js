@@ -12,7 +12,8 @@
             const newBalance = addMoneyNumber + balaceNumber;
             
             document.getElementById('account-balance').innerText = newBalance;
-            
+            addMoneyInput.value = ' ';
+            inputPinNumber.value = ' ';
         }
         else{
             alert('Enter the right PIN!')
