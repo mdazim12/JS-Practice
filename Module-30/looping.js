@@ -9,3 +9,18 @@
      for(const char of nobab){
         console.log(char)
      }
+
+     const glass = {
+        name : 'glass',
+        color : 'goldedn',
+        price : 10,
+        isClean : true,
+    }
+
+    const keys = Object.keys(glass);
+
+    for(const kk of keys){
+        console.log(kk)
+    }
+
+    FOR IN
