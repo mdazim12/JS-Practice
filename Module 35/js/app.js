@@ -5,4 +5,7 @@
     const setAge = () =>{
         localStorage.setItem('age' , '45')
     }
-    
+
+    const removeAge = () => {
+        localStorage.removeItem('age')
+    }
