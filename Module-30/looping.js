@@ -23,4 +23,4 @@
         console.log(kk)
     }
 
-    FOR IN
+//for in using for oboject
