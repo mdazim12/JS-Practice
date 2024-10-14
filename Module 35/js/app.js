@@ -22,6 +22,8 @@ const addProduct = () =>{
 
     // console.log(productFeild , quaintityFeild)
     displayProduct(productFeild, quaintityFeild);
+    saveProductToLocalStorage(productFeild,quaintityFeild)
+   
 }
 
 
@@ -30,4 +32,20 @@ const displayProduct = (productFeild, quaintityFeild) => {
     const li = document.createElement('li');
     li.innerText =  `${productFeild} ${quaintityFeild}`
     productContainer.appendChild(li)
+}
+
+const getStoreShopingCart = () =>{
+    const storedCart = localStorage.getItem('cart');
+    let cart = {}
+    if(storedCart){
+        cart = JSON.parse(storedCart)
+    }
+    return cart;
+}
+
+const saveProductToLocalStorage = (product, quaintity) =>{
+    const cart = getStoreShopingCart();
+    cart[product] = quaintity;
+    const cartStringifield = JSON.stringify(cart)
+    localStorage.setItem('cart', cartStringifield)
 }
