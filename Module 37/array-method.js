@@ -18,3 +18,11 @@
     //For Each function who is no return
     products.forEach( x => console.log(x));
     products.forEach(y => console.log(y.color))
+
+
+
+    //filter
+    const cheapPrice = products.filter(x => x.price <= 5000);
+    // console.log(cheapPrice)
+    const spacificName = products.filter(z => z.name.includes('ss'));
+    console.log(spacificName)
