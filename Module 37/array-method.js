@@ -24,5 +24,10 @@
     //filter
     const cheapPrice = products.filter(x => x.price <= 5000);
     // console.log(cheapPrice)
-    const spacificName = products.filter(z => z.name.includes('ss'));
+    const spacificName = products.filter(z => z.name.includes('n'));
     console.log(spacificName)
+
+
+    //find
+    const special = products.find(p => p.name.includes('n'));
+    console.log(special)
