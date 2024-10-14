@@ -10,3 +10,6 @@
 
     const brands = products.map(product => product.brand);
     console.log(brands)
+
+    const allPrice = products.map(x => x.price);
+    console.log(allPrice)
