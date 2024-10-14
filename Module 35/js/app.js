@@ -23,6 +23,7 @@ const addProduct = () =>{
     // console.log(productFeild , quaintityFeild)
     displayProduct(productFeild, quaintityFeild);
     saveProductToLocalStorage(productFeild,quaintityFeild)
+    displayProductFromStorage()
    
 }
 
@@ -49,3 +50,14 @@ const saveProductToLocalStorage = (product, quaintity) =>{
     const cartStringifield = JSON.stringify(cart)
     localStorage.setItem('cart', cartStringifield)
 }
+
+const displayProductFromStorage = () =>{
+     const saveCart = getStoreShopingCart();
+     console.log(saveCart)
+     for(const product in saveCart){
+        const quaintity = saveCart[product]
+        console.log(product, quaintity)
+     }
+}
+
+displayProductFromStorage();
