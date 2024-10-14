@@ -9,7 +9,12 @@
     ]
 
     const brands = products.map(product => product.brand);
-    console.log(brands)
+    // console.log(brands)
 
     const allPrice = products.map(x => x.price);
-    console.log(allPrice)
+    // console.log(allPrice)
+
+
+    //For Each function who is no return
+    products.forEach( x => console.log(x));
+    products.forEach(y => console.log(y.color))
