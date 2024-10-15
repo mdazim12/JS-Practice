@@ -11,8 +11,22 @@ function App() {
       <h1>Vite + React</h1>
       <Person></Person>
       <Student></Student>
+      <Device name = 'laptop' price = '50k'></Device>
+      <Device name = 'Phone' price = '15k'></Device>
+      <Device name = 'Watch' price = '3k'></Device>
+      <Device name = 'keyboard' price = '400'></Device>
+      <Device name = 'Mouse' price = '600'></Device>
 
     </>
+  )
+}
+
+
+function Device(props){
+  return (
+    <div>
+        <h2>Devices is: {props.name} price is: {props.price} </h2>
+    </div>
   )
 }
 
@@ -25,7 +39,7 @@ function Person(){
 
 function Student(){
   return(
-    <div>
+    <div className='student' >
       <h3>This is student:</h3>
       <p>Name:</p>
       <p>age:</p>
