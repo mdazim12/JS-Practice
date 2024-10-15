@@ -10,7 +10,11 @@ function App() {
     <>
       
       <h1>Vite + React</h1>
-      <Todo></Todo>
+     
+
+      <Todo task ="ami gumabo" isDone ={true}></Todo>
+      <Todo task ="core concpets" isDone = {false}></Todo>
+      <Todo task ="ami gumabo" isDone = {true}></Todo>
     
       {/* <Person></Person>
       <Student grade = '7' score = '90'></Student>
