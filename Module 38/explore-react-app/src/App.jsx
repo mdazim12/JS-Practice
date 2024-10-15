@@ -10,6 +10,8 @@ function App() {
       
       <h1>Vite + React</h1>
       <Person></Person>
+      <Student grade = '7' score = '90'></Student>
+      <Student grade = '11' score = '87'></Student>
       <Student></Student>
       <Device name = 'laptop' price = '50k'></Device>
       <Device name = 'Phone' price = '15k'></Device>
@@ -37,12 +39,14 @@ function Person(){
   return <h3>Hello Sir my age is: {age + money} her name is{person.name} , her age is: {person.age} </h3>
 }
 
-function Student(){
+  //const {grade , score} ={grade :'7', score : '90'}
+
+function Student({grade = 'N/A', score = 'N/A'}){
+  
   return(
-    <div className='student' >
-      <h3>This is student:</h3>
-      <p>Name:</p>
-      <p>age:</p>
+    <div className='' >
+      <p>Name: {grade}</p>
+      <p>age: {score} </p>
     </div>
   )
 }
