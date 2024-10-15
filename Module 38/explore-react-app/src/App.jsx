@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Todo from './todo'
 
 function App() {
 
@@ -9,7 +10,9 @@ function App() {
     <>
       
       <h1>Vite + React</h1>
-      <Person></Person>
+      <Todo></Todo>
+    
+      {/* <Person></Person>
       <Student grade = '7' score = '90'></Student>
       <Student grade = '11' score = '87'></Student>
       <Student></Student>
@@ -17,7 +20,7 @@ function App() {
       <Device name = 'Phone' price = '15k'></Device>
       <Device name = 'Watch' price = '3k'></Device>
       <Device name = 'keyboard' price = '400'></Device>
-      <Device name = 'Mouse' price = '600'></Device>
+      <Device name = 'Mouse' price = '600'></Device> */}
 
     </>
   )
