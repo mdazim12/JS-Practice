@@ -57,6 +57,7 @@ const displayProductFromStorage = () =>{
      for(const product in saveCart){
         const quaintity = saveCart[product]
         console.log(product, quaintity)
+        displayProduct(product, quaintity)
      }
 }
 
