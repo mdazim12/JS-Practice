@@ -3,18 +3,39 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './todo'
+import Actor from './Actor'
+import Singer from './Singer'
 
 function App() {
 
+  const actors = ['Sakib Khan' , 'Salman Khan' , 'Josim', 'Jahed Khan' , 'Bappa Raj'];
+
+  const singers = [
+    {name : 'Mhafur Rahama', age : 68},
+    {name : 'Eva Rahama', age : 38},
+    {name : 'Pritom vai', age : 28},
+  ]
   return (
     <>
       
       <h1>Vite + React</h1>
-     
 
-      <Todo task ="ami gumabo" isDone ={true}></Todo>
+     {
+      singers.map(singer => <Singer name = {singer}></Singer>)
+     }
+
+      {/* <Actor name ="Kala "></Actor>  */}
+
+
+    {/* {
+      actors.map(actor => <Actor name = {actor}></Actor>)
+    } */}
+
+
+      {/* <Todo task ="ami gumabo" isDone ={true}></Todo>
       <Todo task ="core concpets" isDone = {false}></Todo>
       <Todo task ="ami gumabo" isDone = {true}></Todo>
+      <Actor name ="Kala "></Actor> */}
     
       {/* <Person></Person>
       <Student grade = '7' score = '90'></Student>
