@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Counter from './Counter'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
     <>
       
       <h2>React Core Concepets Two </h2>
+      <Counter></Counter>
+      
       <button onClick={handelClick}>Click Me</button>
 
       <button onClick={handelClick2} >Button Two</button>
