@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './Counter'
+import Team from './Team'
 
 function App() {
 
@@ -23,8 +24,9 @@ function App() {
     <>
       
       <h2>React Core Concepets Two </h2>
+      <Team></Team>
       <Counter></Counter>
-      
+
       <button onClick={handelClick}>Click Me</button>
 
       <button onClick={handelClick2} >Button Two</button>
