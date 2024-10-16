@@ -13,6 +13,10 @@ function App() {
   alert('Secound Button cliked');
  }
 
+ const handaleFive = (num) =>{
+  alert(num + 5)
+ }
+
 
   return (
     <>
@@ -21,6 +25,10 @@ function App() {
       <button onClick={handelClick}>Click Me</button>
 
       <button onClick={handelClick2} >Button Two</button>
+
+      <button onClick={() => {alert('hello')}} >Button Three</button>
+
+      <button onClick={() => handaleFive(3)} >Button Three</button>
       
     </>
   )
