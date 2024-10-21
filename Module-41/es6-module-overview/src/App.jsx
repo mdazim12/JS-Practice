@@ -6,10 +6,33 @@ function App() {
   const [count, setCount] = useState(0)
 
   const watchs = [
-    {id: 1, name: 'apple watch', price: 2000},
-    {id: 2, name: 'Mi watch', price: 1500},
-    {id: 3, name: 'Huwai watch', price: 2000},
-  ]
+    {
+      id: 1,
+      name: "Apple Watch Series 9",
+      price: 399,
+    },
+    {
+      id: 2,
+      name: "Samsung Galaxy Watch 6",
+      price: 349,
+    },
+    {
+      id: 3,
+      name: "Garmin Forerunner 965",
+      price: 599,
+    },
+    {
+      id: 4,
+      name: "Fitbit Versa 4",
+      price: 229,
+    },
+    {
+      id: 5,
+      name: "Fossil Gen 6",
+      price: 299,
+    }
+  ];
+  
 
   return (
     <>
