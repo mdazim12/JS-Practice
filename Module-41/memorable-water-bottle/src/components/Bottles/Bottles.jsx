@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Bottle from "../Bottle/Bottle";
+import './Bottles.css'
 
 const Bottles = () => {
 
@@ -14,9 +15,14 @@ const Bottles = () => {
     return (
         <div>
             <h4>Hi I AM Bottles : {bottles.length}</h4>
+            
+        <div className="bottle-container"> 
             {
                 bottles.map(bottle => <Bottle key= {bottle.id} bottle ={bottle}></Bottle> )
             }
+
+        </div>
+
         </div>
     );
 };
