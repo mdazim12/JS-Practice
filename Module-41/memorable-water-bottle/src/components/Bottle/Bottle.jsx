@@ -3,7 +3,6 @@ import './Bottle.css'
 
 const Bottle = ({ bottle , handleAddToCart }) => {
     const {name, price, img} = bottle;
-    console.log(bottle)
     return (
         <div className="bottle">
             <h3> Name : {name} </h3>
