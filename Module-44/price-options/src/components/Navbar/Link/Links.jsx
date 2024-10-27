@@ -11,7 +11,7 @@ const Links = ({ route }) => {
 };
 
 
-Links.proptypes = {
+Links.propTypes = {
     route:PropTypes.object
 }
 

@@ -1,7 +1,13 @@
+import { useState } from "react";
 import Links from "./Link/Links";
+import { CiMenuBurger } from "react-icons/ci";
+import { MdOutlineClose } from "react-icons/md";
+
 
 
 const Navbar = () => {
+
+    const [open,setOpen] = useState(false);
 
     const routes = [
         { id: 1, name: "Home", path: "/" },
@@ -13,6 +19,17 @@ const Navbar = () => {
 
     return (
         <nav>
+          
+          <div className="md:hidden" onClick={()=> setOpen(!open)} >
+
+            {
+                open == true ? 
+                <CiMenuBurger className="text-3xl "></CiMenuBurger> : 
+                <MdOutlineClose className="text-3xl"></MdOutlineClose>
+            }
+                
+          </div>
+           
             <ul className="flex gap-3">
                 {
                     routes.map(route => <Links 
