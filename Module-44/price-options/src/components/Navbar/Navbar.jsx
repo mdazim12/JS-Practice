@@ -30,7 +30,7 @@ const Navbar = () => {
                 
           </div>
            
-            <ul className="flex gap-3">
+            <ul className={`lg:flex gap-3 ${open ? '' : 'hidden'}`}>
                 {
                     routes.map(route => <Links 
                         key={route.id}
