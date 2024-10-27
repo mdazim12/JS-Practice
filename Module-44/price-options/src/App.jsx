@@ -1,5 +1,7 @@
 
 import './App.css'
+import DaisyNav from './components/DaisyNav/DaisyNav'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
  
@@ -7,12 +9,10 @@ function App() {
   return (
     <>
       
-      <h1>Vite + React default</h1>
+     <DaisyNav></DaisyNav>
+     <Navbar></Navbar>
       
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-
+     
     
 
     </>
