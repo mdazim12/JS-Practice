@@ -30,3 +30,11 @@ a{
     color: white;
     border-radius: 10px;
 }
+.active{
+    color: red;
+}
+
+
+.red{
+    color: red;
+}
