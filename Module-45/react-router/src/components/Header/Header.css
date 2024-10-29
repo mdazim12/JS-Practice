@@ -23,3 +23,10 @@ a{
     background-color: white;
     color: black;
 }
+.box-2{
+    padding: 10px;
+    margin: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
