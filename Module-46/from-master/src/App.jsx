@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       
-      <h1>Vite + React</h1>
+      <h1> Form Master</h1>
       
       {/* <SimpleForm></SimpleForm> */}
       {/* <StatefullForm></StatefullForm> */}
