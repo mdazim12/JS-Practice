@@ -19,9 +19,17 @@ const Register = () => {
         
         const email = event.target.email.value;
         const password = event.target.password.value;
+        const terms = event.target.terms.checked;
+
+        console.log(email,password,terms)
 
         setErrorMessage('')
         setSucess(false)
+
+        if(!terms) {
+            setErrorMessage('Accept our terms & condiation');
+            return;
+        }
 
 
         if(password.length < 6){
@@ -87,6 +95,13 @@ const Register = () => {
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
+
+                    <div className="form-control">
+                        <label className="label cursor-pointer justify-start gap-4">
+                            <input type="checkbox"  name ="terms"  className="checkbox" />
+                            <span className="label-text">Accept Term & Condiation</span>
+                        </label>
+                        </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Register Now</button>
                     </div>
