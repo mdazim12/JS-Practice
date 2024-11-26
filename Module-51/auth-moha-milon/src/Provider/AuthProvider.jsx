@@ -1,13 +1,16 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
-import  { createContext, useState } from "react";
+import  { createContext, useEffect, useState } from "react";
 import auth from "../firebase.init";
 
 
- const [user,setUser] = useState(null)
 
  export const AuthContext = createContext(null) ;
+ 
+
 
  const AuthProvider = ({children}) => {
+
+    const [user, setUser] = useState(null)
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth,email,password);
@@ -17,23 +20,31 @@ import auth from "../firebase.init";
         return signInWithEmailAndPassword(auth,email,pasword);
     }
 
-  
-    onAuthStateChanged(auth, (currentUser) => {
-        if (currentUser) {  
-            console.log('User is logged in:', currentUser);
+
+    useEffect(()=> {
+        onAuthStateChanged(auth,currentUser => {
+            console.log('current user is',currentUser)
             setUser(currentUser)
-        } else {
-            console.log('No user is logged in');
-            setUser(null)
-        }
-    });
+        })
+        
+    },[])
+  
+    // onAuthStateChanged(auth, (currentUser) => {
+    //     if (currentUser) {  
+    //         console.log('User is logged in:', currentUser);
+    //         setUser(currentUser)
+    //     } else {
+    //         console.log('No user is logged in');
+    //         setUser(null)
+    //     }
+    // });
    
 
     const AuthInfo = {
         createUser,
         signInUser,
-        user,
-        
+        user
+
     }
     
 
