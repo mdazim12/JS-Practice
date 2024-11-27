@@ -1,11 +1,14 @@
  const express = require('express')
  const mounts = require('./moutain.json')
+ const cors = require('cors')
  const app = express();
  const port = 5000;
 
  app.get('/',(res,req) => {
     req.send('This is my main server ki khobor batija')
  });
+
+ app.use(cors())
 
  app.get('/mounts',(res,req) => {
     req.send(mounts)
