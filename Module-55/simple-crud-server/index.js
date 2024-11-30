@@ -45,6 +45,35 @@ async function run() {
       res.send(result)
     })
 
+    // app.get('/users/:id', async(req, res) => {
+    //   const id = req.params.id;
+    //   const query = {_id :new ObjectId(id)}
+    //   const user = await userCollection.findOne(query);
+    //   res.send(user);
+    // })
+
+
+    app.get('/users/:id', async (req, res) => {
+      const id = req.params.id;
+    
+      if (!ObjectId.isValid(id)) {
+        return res.status(400).send({ error: 'Invalid user ID' });
+      }
+    
+      const query = { _id: new ObjectId(id) };
+    
+      try {
+        const user = await userCollection.findOne(query);
+        if (!user) {
+          return res.status(404).send({ error: 'User not found' });
+        }
+        res.send(user);
+      } catch (error) {
+        console.error('Error fetching user:', error);
+        res.status(500).send({ error: 'Internal server error' });
+      }
+    });
+
     app.post('/users', async(req,res) => {
       const user = req.body;
 
