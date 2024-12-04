@@ -1,4 +1,6 @@
 import React from 'react';
+import Swal from 'sweetalert2'
+
 
 const AddCofffe = () => {
 
@@ -16,6 +18,28 @@ const AddCofffe = () => {
         const newCoffe = {name,quauntity,supplier,taste,category,details,photo}
 
         console.log(newCoffe)
+
+        //send data to backend
+
+        fetch('http://localhost:5000/coffee',{
+            method : 'POST',
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(newCoffe)
+        }) 
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Coffee Added Succesfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
     }
 
 
