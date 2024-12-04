@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Banner from './Banner';
 import Feature from './Feature';
 import { useLoaderData } from 'react-router-dom';
@@ -6,7 +6,8 @@ import CofffeCard from './CofffeCard';
 
 const Home = () => {
 
-    const coffees =  useLoaderData();
+    const loadedCoffees =  useLoaderData();
+    const [coffees, setCoffess] = useState(loadedCoffees);
 
     return (
         <div>
@@ -17,7 +18,11 @@ const Home = () => {
            <div className='grid grid-cols-2'>
                 
                     {
-                        coffees.map(coffe => <CofffeCard coffe = {coffe}></CofffeCard>)
+                        coffees.map(coffe => <CofffeCard 
+                            coffe = {coffe}
+                            coffees = {coffees}
+                            setCoffess = {setCoffess}
+                            ></CofffeCard>)
                     }
                 
            </div>
