@@ -32,7 +32,11 @@ async function run() {
 
     const coffeeCollection = client.db('coffeDB').collection('coffe');
     
-
+    app.get('/coffee' , async (req,res) => {
+        const cursor = coffeeCollection.find();
+        const result = await cursor.toArray();
+        res.send(result)
+    } )
     
     app.post('/coffee', async(req,res) => {
       const newCoffe = req.body;

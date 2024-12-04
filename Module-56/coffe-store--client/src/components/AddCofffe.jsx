@@ -33,10 +33,10 @@ const AddCofffe = () => {
             console.log(data)
             if(data.insertedId){
                 Swal.fire({
-                    title: 'Error!',
+                    title: 'Coffe Added',
                     text: 'Coffee Added Succesfully',
                     icon: 'success',
-                    confirmButtonText: 'Cool'
+                    confirmButtonText: 'okay'
                   })
             }
         })
