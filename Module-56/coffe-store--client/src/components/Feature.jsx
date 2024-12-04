@@ -7,7 +7,7 @@ import featureFour from '../assets/4 1.png'
 
 const Feature = () => {
     return (
-        <div className='bg-gray-300'>
+        <div className='bg-gray-300 py-10'>
             <div className='container mx-auto'>
                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
                     <div className='m-4 p-4 shadow-2xl rounded-2xl'>
